@@ -1,0 +1,17 @@
+[package]
+name = "beehive"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.8.1"
+chrono = {version = "0.4.39", features = ["serde"]}
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.134"
+tokio = { version = "1.42.0", features = ["full"] }
+tracing = "0.1.41"
+uuid = {version = "1.11.0", features = ["serde", "v7"] }
+tracing-subscriber = {version = "0.3.19", features = ["env-filter","chrono"]}
+tower-http = { version = "0.6.2", features = ["trace"] }
+bb8-postgres =  { version = "0.9.0", features = ["with-chrono-0_4", "with-serde_json-1", "with-uuid-1"] }
+bb8 = "0.9.0"
